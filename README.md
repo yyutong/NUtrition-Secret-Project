@@ -1,5 +1,5 @@
 # NUtrition Secret
-A website help students find food and track energy intaking.
+A website help students find food on campus and track energy intaking.
 
 ## Tech Stack
 ReactJS, Express, Node and MongoDB.
