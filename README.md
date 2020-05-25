@@ -59,11 +59,21 @@ We finish sign up and log in features and create simple search scheme.
 
 - log in
 
-![](https://i.imgur.com/o2uZ4GA.png)
+![](https://i.imgur.com/dmU7lBP.png)
 <br/>
+- server
+
+![](https://i.imgur.com/n2hGv6s.png)
+<br/>
+
 - homepage
 
 ![](https://i.imgur.com/ncCdkHl.jpg)
+<br/>
+
+- food information page
+
+![](https://i.imgur.com/4U02Y3Z.png)
 
 
 
