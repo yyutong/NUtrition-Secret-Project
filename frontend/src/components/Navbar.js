@@ -79,11 +79,12 @@ class Navbar extends Component {
                 <li >
                     <Link to="/userscreen"><button>Restaurants</button></Link>
                 </li>
-                <li >
+                {/* <li >
                     <Link to="/orders"><button>Orders</button></Link>
-                </li>
+                </li> */}
+                
                 <li >
-                    <form onSubmit={this.handleSubmit} style={{border: "none", height: "100%"}}>
+                    <form onSubmit={this.handleSubmit} style={{border: "none", height: "80%"}}>
                         <input type="text" placeholder= "Search for food" value={this.state.value} onChange={this.handleChange}/>
                         <button className="searchButton"></button>
                     </form>
@@ -115,6 +116,10 @@ class Navbar extends Component {
                 </li>
                 <li >
                     <Link to="/login"><button>Login</button></Link>
+                </li>
+
+                <li>
+                    <Link to="/userscreen"><button>Restaurants</button></Link>
                 </li>
             </ul>
         )
