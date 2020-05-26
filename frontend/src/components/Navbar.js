@@ -121,6 +121,12 @@ class Navbar extends Component {
                 <li>
                     <Link to="/userscreen"><button>Restaurants</button></Link>
                 </li>
+                <li >
+                    <form onSubmit={this.handleSubmit} style={{border: "none", height: "80%"}}>
+                        <input type="text" placeholder= "Search for food" value={this.state.value} onChange={this.handleChange}/>
+                        <button className="searchButton"></button>
+                    </form>
+                </li>
             </ul>
         )
 
