@@ -20,17 +20,25 @@ Therefore, we are inspired to design a platform for NUS students, providing menu
 - Make it convenient for students to check comments for each stall/meal.
 
 ## User Stories
-We mainly want to serve NUS students and staff, but can also provide service for NUS visitors.
+Since it has been observed that people are gradually getting tired of having loads of apps on their phone, our project will be created in the form of a web app.
+Being a web app, our project will help potential users get rid of the procedure of downloading the app, helping users significantly save time and avoid troublesome.
+Users will have the choice of make their own decision of whether to register for the website or not.
+However, without registration and logging in, the function would be limited.(e.g. unable to check their history of calories intake)
 
-For people who want to use this app, they can choose to register or not. If they register, they can document the food calories they eat. If they don’t register, they can just look through information.
 
 ## Scope of Project
-// details about web and mobile adjusting
+We focus on a **website** and its **mobile adjusting**.
+
+- Provide online menu for various stalls that can be found on NUS campus
+- Provide information of various food for each stall(e.g. price, calories, ingredients, etc)
+- Enable the search function with multiple criteria(e.g. by descending price, by descending calories, by location, by special needs)
+- Track daily food and calories intake
+
 
 ## Features
 - Provide nutrition information on on-campus meals
 - Provide menus for every canteen
-- Record and track everyday food intake
+- Record and track food intake
 - Open a public comment area for users to leave their comments about the food
 - Automatically calculate total calories intake
 - Trial mode available for visitors as well(no need to log in, but functionalities would be limited)
@@ -44,10 +52,22 @@ For people who want to use this app, they can choose to register or not. If they
   This app can search restaurants but can't search for concrete food. We plan to add detailed food information.
 
 ## Program Flow
-// to draw
+
+![](https://i.imgur.com/AA7Bj6z.jpg)
+
+
+
 
 ## Feature Plan
-// to write
+- [x] Sign up and log in parts
+- [x] [by 30/5] Food information search
+- [ ] [by&emsp;7/6] Energy intake documentation and calculation
+- [ ] [by 14/6] Comment area
+- [ ] [by 21/6] Make trial mode available for users who don't log in
+
+
+
+
 
 ## Proof of Concept
 We finish sign up and log in features and create simple search scheme.
@@ -77,6 +97,5 @@ We finish sign up and log in features and create simple search scheme.
 
 
 
-## Project Log
-// to paste
+
 
