@@ -21,7 +21,7 @@ Therefore, we are inspired to design a platform for NUS students, providing menu
 
 ## User Stories
 We mainly want to serve NUS students and staff, but can also provide service for NUS visitors.
-Since it has been observed that people are gradually getting tired of having loads of apps on their phone, pur project will be created in the form of a web app.
+Since it has been observed that people are gradually getting tired of having loads of apps on their phone, our project will be created in the form of a web app.
 Being a web app, our project will help potential users get rid of the procedure of downloading the app, helping users significantly save time and avoid troublesome.
 Users will have the choice of make their own decision of whether to register for the website or not.
 However, without registration and logging in, the function would be limited.(e.g. unable to check their history of calories intake)
