@@ -90,7 +90,7 @@ class EditProfile extends Component {
         return(
         <div className="App">
             <br/> <br/> <br/> <br/>
-            <img id="logo" src={logo} width='30%' height="30%" alt="CE Logo"/>
+            <img id="logo" src={logo} width='40%' height="5%" alt="CE Logo"/>
             <br/> 
 
             <h3 className="heading"> Edit Profile </h3>

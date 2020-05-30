@@ -14,7 +14,7 @@ import ForgotPassword from './components/forgotpassword'
 import PasswordSent from './components/passwordsent'
 import Userscreen from './components/userscreen'
 import Menu from './components/menu'
-import blank from './components/blank'
+// import blank from './components/blank'
 import User_Orders from './components/user_orders'
 import EditProfile from './components/editprofile'
 import 'bootstrap/dist/css/bootstrap.min.css';
