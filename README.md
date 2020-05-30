@@ -20,11 +20,11 @@ Therefore, we are inspired to design a platform for NUS students, providing menu
 - Make it convenient for students to check comments for each stall/meal.
 
 ## User Stories
-Since it has been observed that people are gradually getting tired of having loads of apps on their phone, our project will be created in the form of a web app.
+We mainly want to serve NUS students and staff, but can also provide service for NUS visitors.
+Since it has been observed that people are gradually getting tired of having loads of apps on their phone, pur project will be created in the form of a web app.
 Being a web app, our project will help potential users get rid of the procedure of downloading the app, helping users significantly save time and avoid troublesome.
 Users will have the choice of make their own decision of whether to register for the website or not.
 However, without registration and logging in, the function would be limited.(e.g. unable to check their history of calories intake)
-
 
 ## Scope of Project
 We focus on a **website** and its **mobile adjusting**.
@@ -36,9 +36,11 @@ We focus on a **website** and its **mobile adjusting**.
 
 
 ## Features
-- Provide nutrition information on on-campus meals
-- Provide menus for every canteen
-- Record and track food intake
+- Provide nutrition information on on-campus food
+- Provide online menus for every canteen
+- Record and track everyday food intake
+- Enable the search function with multiple criteria
+(e.g. by descending price, by descending calories, by location, by special needs)
 - Open a public comment area for users to leave their comments about the food
 - Automatically calculate total calories intake
 - Trial mode available for visitors as well(no need to log in, but functionalities would be limited)
