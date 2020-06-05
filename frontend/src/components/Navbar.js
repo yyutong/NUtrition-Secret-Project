@@ -81,7 +81,8 @@ class Navbar extends Component {
                 </li>
                 {/* <li >
                     <Link to="/orders"><button>Orders</button></Link>
-                </li> */}
+                </li>  this part is hidden in purpose, we don't need orders but calories*/}
+                
                 
                 <li >
                     <form onSubmit={this.handleSubmit} style={{border: "none", height: "80%"}}>
