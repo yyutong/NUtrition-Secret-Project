@@ -12,7 +12,7 @@ const RestSchema = new Schema({
         required: true
     },
     num_orders: {
-        type:Number,
+        type: Number,
         required: true
     }
 });
