@@ -102,7 +102,7 @@ app.post('/placeorder', function(req, res) {
     });
     newOrder.save()
     .then(order=>{
-        res.json("Your Order has been Placed. Track in Orders Screen")
+        res.json("Your Order has been Placed. Track in History Screen")
     });
     
     console.log(req.body)

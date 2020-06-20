@@ -79,9 +79,9 @@ class Navbar extends Component {
                 <li >
                     <Link to="/userscreen"><button>Restaurants</button></Link>
                 </li>
-                {/* <li >
-                    <Link to="/orders"><button>Orders</button></Link>
-                </li>  this part is hidden in purpose, we don't need orders but calories*/}
+                <li >
+                    <Link to="/orders"><button>History</button></Link>
+                </li>  
                 
                 
                 <li >

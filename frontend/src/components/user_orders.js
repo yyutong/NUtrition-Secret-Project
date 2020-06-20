@@ -122,12 +122,13 @@ class user_orders extends Component {
                 <div id = "list" > 
                     <ul id = "uList">
                         <li id = "resName">{d.restaurant_name}&nbsp; Order#: {d.orderID}</li>
-                        <li>&nbsp;&nbsp;&nbsp;Order Placed at: &nbsp; {(d.order_time).split('T')[0]} &nbsp;&nbsp; {(parseInt(d.order_time.split('T')[1].split('.')[0], 10)+5)%24 }:{(d.order_time.split('T')[1]).split(':')[1]}:{(d.order_time.split('T')[1]).split(':')[2].split('.')[0]} </li>                            
-                        <li>&nbsp;&nbsp;&nbsp;Location: &nbsp; {d.del_location}</li>
-                        <li>&nbsp;&nbsp;&nbsp;Instructions: &nbsp;{d.instructions}</li>
+                        <li>&nbsp;&nbsp;&nbsp;Document at: &nbsp; {(d.order_time).split('T')[0]} &nbsp;&nbsp; {(parseInt(d.order_time.split('T')[1].split('.')[0], 10)+5)%24 }:{(d.order_time.split('T')[1]).split(':')[1]}:{(d.order_time.split('T')[1]).split(':')[2].split('.')[0]} </li>                            
+                        <li>&nbsp;&nbsp;&nbsp;Breakfast/Lunch/Dinner: &nbsp; {d.del_location}</li>
+                        <li>&nbsp;&nbsp;&nbsp;Ideal Calorie Intake: &nbsp;{d.instructions}</li>
+                        <li>&nbsp;&nbsp;&nbsp;Actual Calorie Intake: &nbsp;{d.total}</li>
                         <div id="btnn">
                             <Button  variant="danger" title="View Bill" onClick={()=>{this.handleShow(d.items, d.orderID)}}>
-                                View Bill
+                                View
                             </Button>
                             &nbsp;&nbsp;&nbsp;
                             <Button  variant={d.status==="pending"? "warning" : "info"  } disabled={true} title="Order Status" onClick={this.handleShow}>
@@ -142,7 +143,7 @@ class user_orders extends Component {
             <div id="orderdiv" key={i}>
                 <div id = "list"> 
                     <ul id = "uList">
-                        <li id = "resName">{d.restaurant_name}&nbsp; Order#: {d.orderID}</li>
+                        <li id = "resName">{d.restaurant_name}&nbsp; Documentation#: {d.orderID}</li>
                         <li>&nbsp;&nbsp;&nbsp;Order Placed at: &nbsp; {(d.order_time).split('T')[0].split('-')[2]}-{(d.order_time).split('T')[0].split('-')[1]}-{(d.order_time).split('T')[0].split('-')[0]} &nbsp;&nbsp; {(parseInt(d.order_time.split('T')[1].split('.')[0], 10)+5)%24 }:{(d.order_time.split('T')[1]).split(':')[1]}:{(d.order_time.split('T')[1]).split(':')[2].split('.')[0]} </li>                            
                         <li>&nbsp;&nbsp;&nbsp;Location: &nbsp; {d.del_location}</li>
                         <li>&nbsp;&nbsp;&nbsp;Instructions: &nbsp;{d.instructions}</li>
@@ -196,13 +197,13 @@ class user_orders extends Component {
                 </MetaTags>
 
                 <div className = "borderx">
-                    <h4 className = "heading3">Pending Orders</h4>
+                    <h4 className = "heading3">Pending</h4>
                     <br/>
                     {check1 ? pendingOrders: (received ? none: loading)}
                     <br/>
                 </div>
                 <div className = "borderx">
-                    <h4 className = "heading3">Completed Orders</h4>
+                    <h4 className = "heading3">Completed</h4>
                     <br/>
                     {check2 ? completedOrders: (received ? none2: loading)}
                     <br/>
@@ -210,7 +211,7 @@ class user_orders extends Component {
 
                 <Modal show={this.state.show} onHide={this.handleClose}>
                   <Modal.Header closeButton>
-                    <Modal.Title>Order Bill for Order# {this.state.orderID}</Modal.Title>
+                    <Modal.Title>Calorie# {this.state.orderID}</Modal.Title>
                   </Modal.Header>
                   <Modal.Body>
                     <Table>
@@ -218,7 +219,7 @@ class user_orders extends Component {
                             <tr>
                                 <th>Item ID</th>
                                 <th>Name</th>
-                                <th>Price</th>
+                                <th>Calorie</th>
                             </tr>
                         </thead>
                             <tbody>
@@ -226,7 +227,7 @@ class user_orders extends Component {
 
                             <tr> 
                                 <td> </td>
-                                <td> <b>Total Order Price</b> </td>
+                                <td> <b>Total Calories</b> </td>
                                 <td> <b>{this.state.total}</b> </td>
                             </tr>
                             </tbody>

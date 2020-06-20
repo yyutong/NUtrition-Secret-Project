@@ -164,7 +164,7 @@ class rest_orders extends Component {
                           <li>&nbsp;&nbsp;&nbsp;Instructions: &nbsp;{d.instructions}</li>
                           <div id="btnn">
                             <Button variant="danger" title="View Bill" onClick={()=>{this.handleShow(d.items, d.orderID)}}>
-                                View Bill
+                                View
                             </Button>
                             &nbsp;&nbsp;&nbsp;
                             <Button variant={d.status==="pending"? "warning" : "info"  } title="Order Status" onClick={(e)=>{this.changeStatus(e,d.status, d.orderID)}}>
@@ -186,7 +186,7 @@ class rest_orders extends Component {
                           <li>&nbsp;&nbsp;&nbsp;Instructions: &nbsp;{d.instructions}</li>
                           <div id="btnn">
                             <Button variant="danger" title="View Bill" onClick={()=>{this.handleShow(d.items, d.orderID)}}>
-                                View Bill
+                                View
                             </Button>
                             &nbsp;&nbsp;&nbsp;
                             <Button variant="success" title="Order Status" onClick={(e)=>{this.changeStatus(e,d.status, d.orderID)}}>
@@ -247,7 +247,7 @@ class rest_orders extends Component {
 
                 <Modal show={this.state.show} onHide={this.handleClose}>
                   <Modal.Header closeButton>
-                    <Modal.Title>Order Bill for Order# {this.state.orderID}</Modal.Title>
+                    <Modal.Title>Calorie for Order# {this.state.orderID}</Modal.Title>
                   </Modal.Header>
                   <Modal.Body>
                     <Table>
@@ -255,7 +255,7 @@ class rest_orders extends Component {
                             <tr>
                                 <th>Item ID</th>
                                 <th>Name</th>
-                                <th>Price</th>
+                                <th>Calorie</th>
                             </tr>
                         </thead>
                             <tbody>
@@ -263,7 +263,7 @@ class rest_orders extends Component {
 
                             <tr> 
                                 <td> </td>
-                                <td> <b>Total Order Price</b> </td>
+                                <td> <b>Total Calorie</b> </td>
                                 <td> <b>{this.state.total}</b> </td>
                             </tr>
                             </tbody>

@@ -124,7 +124,7 @@ class Menu extends Component {
     render() {
 
     	if (this.state.emptycart === true){
-    		alert("Your shopping cart is empty. Please click the + symbol next to an item to add it to your cart.")
+    		alert("Your calorie cart is empty. Please click the + symbol next to an item to add it to your cart.")
     		this.state.emptycart = false
     	}
 
@@ -178,7 +178,7 @@ class Menu extends Component {
     	const view_cart = (
     	<Modal show={this.state.show} animation='true' onHide={this.handleClose}>	
     		<Modal.Header closeButton>
-	            <Modal.Title>Shopping cart for {this.state.rest}</Modal.Title>
+	            <Modal.Title>Calorie Cart for {this.state.rest}</Modal.Title>
 	          </Modal.Header>
 	          <Modal.Body>
 
@@ -187,14 +187,14 @@ class Menu extends Component {
 		          		<tr>
 			          		<th>Item ID</th>
 			          		<th>Name</th>
-			          		<th>Price</th>
+			          		<th>Calorie</th>
 		          		</tr>
 		          	</thead>
 		          		<tbody>
 			          		{cart_table}
 			          	<tr> 
 			          		<td> </td>
-			          		<td> <b>Total Order Price</b> </td>
+			          		<td> <b>Total Calories</b> </td>
 			          		<td> <b>{this.state.total}</b> </td>
 			          	</tr>
 						</tbody>
@@ -202,10 +202,10 @@ class Menu extends Component {
 
 		         <form onSubmit={(e)=>{this.placeOrder(e,this.props.auth.user.email,this.props.auth.user.number)}}>
 	                <label>
-	                    Delivery Location &nbsp; &nbsp; &nbsp;  
+	                    Breakfast/Lunch/Dinner &nbsp; &nbsp; &nbsp;  
 	                    <input
 	                    type="text"
-	                    placeholder="Location to deliver to"
+	                    placeholder=""
 	                    name="location"
 	                    required
 	                    />
@@ -213,17 +213,17 @@ class Menu extends Component {
 	                <br/>
 
 	                <label>
-	                	Special Instructions &nbsp;
+	                	Ideal Calorie Intake  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 	                    <input
 	                    type="text"
-	                    placeholder="Instructions"
+	                    placeholder=""
 	                    name="instruction"
 	                    // value = {this.state.instructions}
 	                    />
 	                </label>
 	                <br/>
 					<Button variant="danger" type="submit">
-					  Place Order
+					 Document All
 					</Button>
 				</form>
 
@@ -237,7 +237,7 @@ class Menu extends Component {
     	const view_message = (
     		<Modal show={this.state.show} animation='true' onHide={this.handleClose}>	
     		<Modal.Header closeButton>
-	            <Modal.Title>Shopping cart for {this.state.rest}</Modal.Title>
+	            <Modal.Title>Calorie Cart for {this.state.rest}</Modal.Title>
 	          </Modal.Header>
 	          <Modal.Body>
 
@@ -261,7 +261,7 @@ class Menu extends Component {
             	<Button variant="danger" title="View shopping cart" className = "VC" onClick={this.handleShow}>
 		        </Button>
 		    </h1>
-		    <h5 className="heading1"> Select an Item to add to your Shopping Cart </h5>
+		    <h5 className="heading1"> select an item to document its calories  </h5>
 
             <br/>
 	            <h4 className = "heading">Food</h4>
