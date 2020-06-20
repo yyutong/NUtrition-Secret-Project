@@ -225,6 +225,9 @@ class Menu extends Component {
 					<Button variant="danger" type="submit">
 					 Document All
 					</Button>
+					<label>
+					  &nbsp;&nbsp;Please login first.
+	                </label>
 				</form>
 
 	          </Modal.Body>
