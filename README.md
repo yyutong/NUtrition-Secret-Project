@@ -1,5 +1,6 @@
 # NUtrition Secret
 A website help students find food on campus and track energy intaking.
+https://nutrition-secret.herokuapp.com/
 
 ## Tech Stack
 ReactJS, Express, Node and MongoDB.
