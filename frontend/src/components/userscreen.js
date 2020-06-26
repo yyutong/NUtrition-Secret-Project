@@ -64,7 +64,7 @@ class Userscreen extends Component {
                     <div id="btn2">
                 		<h4> Jammin Java </h4>
                 		<div>
-                		<StarRatingComponent name="JamminJava" editing={false} starCount={5} value={parseInt(this.state.r3, 10)}/>
+                		<StarRatingComponent name="Jammin Java" editing={false} starCount={5} value={parseInt(this.state.r3, 10)}/>
                 		</div>
                 	</div>
             	</Link>
@@ -83,7 +83,7 @@ class Userscreen extends Component {
                 	<div id="btn4">
                 		<h4> Zakir Tikka </h4> 
                 		<div>
-                		<StarRatingComponent name="Zakir" editing={false} starCount={5} value={parseInt(this.state.r1, 10)}/>
+                		<StarRatingComponent name="Zakir Tikka" editing={false} starCount={5} value={parseInt(this.state.r1, 10)}/>
                 		</div>
                 	</div>
                 </Link>
