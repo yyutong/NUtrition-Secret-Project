@@ -197,17 +197,17 @@ class user_orders extends Component {
                 </MetaTags>
 
                 <div className = "borderx">
-                    <h4 className = "heading3">Pending</h4>
+                    <h4 className = "heading3">Documented</h4>
                     <br/>
                     {check1 ? pendingOrders: (received ? none: loading)}
                     <br/>
                 </div>
-                <div className = "borderx">
+                {/* <div className = "borderx">
                     <h4 className = "heading3">Completed</h4>
                     <br/>
                     {check2 ? completedOrders: (received ? none2: loading)}
                     <br/>
-                </div>
+                </div> */}
 
                 <Modal show={this.state.show} onHide={this.handleClose}>
                   <Modal.Header closeButton>
@@ -219,7 +219,7 @@ class user_orders extends Component {
                             <tr>
                                 <th>Item ID</th>
                                 <th>Name</th>
-                                <th>Calorie</th>
+                                <th>Calories</th>
                             </tr>
                         </thead>
                             <tbody>

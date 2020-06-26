@@ -159,7 +159,7 @@ class Navbar extends Component {
                                 <tr>
                                     <th>Restaurant</th>
                                     <th>Name</th>
-                                    <th>Price</th>
+                                    <th>Calories</th>
                                 </tr>
                             </thead>
                                 <tbody>
