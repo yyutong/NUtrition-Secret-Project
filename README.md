@@ -71,6 +71,7 @@ We focus on a **website** and its **mobile adjusting**.
 - [x] Deploy on Heroku
 - [ ] [by 03/7] Add food nutrition information
 - [ ] [by 10/7] Open a public comment area for users to leave their comments about the food
+- [ ] [by 17/7] Mobile adjusting
 - [ ] [by 27/7] Final testing
 
 
