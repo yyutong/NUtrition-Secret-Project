@@ -29,8 +29,8 @@ module.exports = function validateRegisterInput(data) {
         errors.number = 'Number is required'
     }
 
-    if(!Validator.isLength(data.number, {min: 11, max: 11})){
-        errors.number = 'Number should have 11 digits'
+    if(!Validator.isLength(data.number, {min: 8, max: 8})){
+        errors.number = 'Number should have 8 digits'
     }
 
     // if(/^\d+$/.test(data.number)){
