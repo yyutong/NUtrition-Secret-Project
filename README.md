@@ -1,7 +1,5 @@
 # NUtrition Secret
 A website help students find food on campus and track energy intaking.
-<br/>
-https://nutrition-secret.herokuapp.com/
 
 ## Tech Stack
 ReactJS, Express, Node and MongoDB.
@@ -63,41 +61,62 @@ We focus on a **website** and its **mobile adjusting**.
 
 
 ## Feature Plan
-- [x] Sign up and log in parts
-- [x] [by 30/5] Food information search
-- [ ] [by&emsp;7/6] Energy intake documentation and calculation
-- [ ] [by 14/6] Comment area
-- [ ] [by 21/6] Make trial mode available for users who don't log in
+- [x] Sign up, log in, edit personal profile, forget password functions
+- [x] Add food calorie information
+- [x] Energy intake documentation and calculation
+- [x] Food information search
+- [x] Make trial mode available for users who don't log in
+- [x] Deploy on Heroku
+- [ ] [by 3/7] Add food nutrition information
+- [ ] [by 10/7] Open a public comment area for users to leave their comments about the food
+- [ ] [by 27/7] Final testing
 
 
 
 
+## How users would use and benifit from these features
+- Sign up, log in, edit personal profile, forget password
 
-## Proof of Concept
-We finish sign up and log in features and create simple search scheme.
+  After signing up, users get an account, which allows them to document the calories they intake.
+  They can editing personal profile to change their email address and password.
+  If they forget password, they can click forget password to reset their password after verifying by the email.
+ 
+- Add food calorie information
+  
+  It's one of our core features. Users can know how many calories they intake when choosing to eat some food.
 
-- sign up
+- Energy intake documentation and calculation
+  
+  Users can add food to the cart and click document them. Then the website can give a total calorie calculation result.
+  Users can click history button on the right above to see all documentations.
 
-![](https://i.imgur.com/Q931AZQ.png)
-<br/>
+- Food information search
 
-- log in
+  It can help users locate the food they want to eat.
+  
+- Make trial mode available for users who don't log in
+  
+  For users who don't login, they can also search food and look through restaurants and food.
+  
+- Deploy on Heroku
 
-![](https://i.imgur.com/dmU7lBP.png)
-<br/>
-- server
+  Users can take advantage of this website online. It is stable.
+  
+## Feature test
 
-![](https://i.imgur.com/n2hGv6s.png)
-<br/>
 
-- homepage
+| Test Case                      | Steps Taken                                                                                      | Expected Result                                                                         | Actual Result                                                                           |
+| ------------------------------ | ------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| Sign up using an email address | Click  sign up button, then type in personal information                                         | The website jumps to login page                                                         | The website jumps to login page                                                         |
+| Login                          | Click login button then type in correct email and password                                       | The website jumps to main page and user can see the hitory button                       | The website jumps to main page and user can see the bistory button                      |
+| Forgot password                | In login screen, click forgot password                                                           | The website asks user to enter associated email, then send the password to the email    | The website asks user to enter associated email, then send the password to the email    |
+| Look through food              | Click restaurants button and then choose a restaurant                                            | Food provided by this restaurant appears including its calories                         | Food provided by this restaurant appears as well as its calories                        |
+| Search for food                | Search for food in the search box                                                                | The food's information is returned including its calories and restaurants it belongs to | The food's information is returned including its calories and restaurants it belongs to |
+|Check all history documentations                                |Click history button                                                                                                  |All food intaken history is loaded after around three seconds including food calories, time and ideal calorie intaking                                                                                         |All food intaken history is loaded after around three seconds including food calories, time and ideal calorie intaking                                                                                         |
+| Document food                  | Click "+" button on the right of the food, then click the cart picture, then click document all. | The user can visit this documentation in his/her history                                | The user can visit this documentation in his/her history                                |
 
-![](https://i.imgur.com/ncCdkHl.jpg)
-<br/>
 
-- food information page
 
-![](https://i.imgur.com/4U02Y3Z.png)
 
 
 
