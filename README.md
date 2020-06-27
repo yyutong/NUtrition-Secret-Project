@@ -1,8 +1,10 @@
 # NUtrition Secret
 A website help students find food on campus and track energy intaking.
 
+Website address: https://nutrition-secret.herokuapp.com/
+
 ## Tech Stack
-ReactJS, Express, Node and MongoDB.
+ReactJS, Express, Node and MongoDB Atlas.
 
 
 ## Proposed Level of Achievement
@@ -67,7 +69,7 @@ We focus on a **website** and its **mobile adjusting**.
 - [x] Food information search
 - [x] Make trial mode available for users who don't log in
 - [x] Deploy on Heroku
-- [ ] [by 3/7] Add food nutrition information
+- [ ] [by 03/7] Add food nutrition information
 - [ ] [by 10/7] Open a public comment area for users to leave their comments about the food
 - [ ] [by 27/7] Final testing
 
@@ -79,7 +81,7 @@ We focus on a **website** and its **mobile adjusting**.
 
   After signing up, users get an account, which allows them to document the calories they intake.
   They can editing personal profile to change their email address and password.
-  If they forget password, they can click forget password to reset their password after verifying by the email.
+  If they forget password, they can click forget password to get their password after verifying by the email.
  
 - Add food calorie information
   
@@ -104,16 +106,16 @@ We focus on a **website** and its **mobile adjusting**.
   
 ## Feature test
 
-
+All the following tests are carried out on https://nutrition-secret.herokuapp.com/
 | Test Case                      | Steps Taken                                                                                      | Expected Result                                                                         | Actual Result                                                                           |
 | ------------------------------ | ------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
 | Sign up using an email address | Click  sign up button, then type in personal information                                         | The website jumps to login page                                                         | The website jumps to login page                                                         |
 | Login                          | Click login button then type in correct email and password                                       | The website jumps to main page and user can see the hitory button                       | The website jumps to main page and user can see the bistory button                      |
-| Forgot password                | In login screen, click forgot password                                                           | The website asks user to enter associated email, then send the password to the email    | The website asks user to enter associated email, then send the password to the email    |
+| Forgot password                | In login screen, click forgot password                                                           | The website asks user to enter associated email, then send the password to the email    | The website asks user to enter associated email, but the email doesn't receive the password    |
 | Look through food              | Click restaurants button and then choose a restaurant                                            | Food provided by this restaurant appears including its calories                         | Food provided by this restaurant appears as well as its calories                        |
 | Search for food                | Search for food in the search box                                                                | The food's information is returned including its calories and restaurants it belongs to | The food's information is returned including its calories and restaurants it belongs to |
 |Check all history documentations                                |Click history button                                                                                                  |All food intaken history is loaded after around three seconds including food calories, time and ideal calorie intaking                                                                                         |All food intaken history is loaded after around three seconds including food calories, time and ideal calorie intaking                                                                                         |
-| Document food                  | Click "+" button on the right of the food, then click the cart picture, then click document all. | The user can visit this documentation in his/her history                                | The user can visit this documentation in his/her history                                |
+| Document food                  | Click "+" button on the right of the food, then click the cart picture, then click document all. | The user can see this documentation in his/her history                                | The user can see this documentation in his/her history                                |
 
 
 
