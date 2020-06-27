@@ -56,7 +56,7 @@ class Login extends Component {
             className={classnames('form-control form-control-lg')} 
             name="email" 
             type="email" 
-            placeholder="Enter accociated Email Address"
+            placeholder="Enter associated Email Address"
             required = "required"
             value= {this.state.changePassEmail} 
             onChange = {event => this.setState({changePassEmail: event.target.value})}
