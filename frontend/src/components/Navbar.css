@@ -19,12 +19,12 @@ mainColor2 = #891421
   background-color: #B02737;
   border: none;
   color: #FFFFFF;
-  float: right;
+  float: none;
   display: inline-block;
-  font-family:arial;
+  font-family:"Gill Sans", sans-serif;
   font-weight: bold;
   /*margin: 0;*/
-  padding: 9px 18px 9px;
+  padding: 8px 16px 9px;
   text-decoration: none;
 }
 
@@ -33,14 +33,14 @@ mainColor2 = #891421
   color: #fff; }
 
 .searchButton{
-  height: 30px;
-  width: 30px;
+  height: 36px;
+  width: 36px;
   border: none;
   background-image: url("search.png");
   background-size: cover;
   background-color: white;
-  vertical-align: top;
+  vertical-align: middle;
   text-decoration: none;
-  padding-top: 20%;
+  padding-top: 0%;
 }
 
