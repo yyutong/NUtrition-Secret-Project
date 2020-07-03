@@ -131,9 +131,9 @@ class user_orders extends Component {
                                 View
                             </Button>
                             &nbsp;&nbsp;&nbsp;
-                            <Button  variant={d.status==="pending"? "warning" : "info"  } disabled={true} title="Order Status" onClick={this.handleShow}>
+                            {/* <Button  variant={d.status==="pending"? "warning" : "info"  } disabled={true} title="Order Status" onClick={this.handleShow}>
                                 Status: {d.status}
-                            </Button>
+                            </Button> */}
                         </div>
                     </ul>
                 </div>
