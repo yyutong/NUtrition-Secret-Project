@@ -2,14 +2,26 @@
 #btn4 {
   position: absolute;
   width: 50%;
-  top: 50%;
+  top: 15%;
   left: 30%;
-  transform: translate(-50%, 250%);
+  transform: translate(-50%, 260%);
   background-color: #B02737;
   color: white;
   padding: 0.5% 2%;
   border-radius: 5px;
 
+}
+
+#btn5 {
+  position: absolute;
+  width: 50%;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, 260%);
+  background-color: #B02737;
+  color: white;
+  padding: 0.5% 2%;
+  border-radius: 5px;
 }
 
 h4{
@@ -38,9 +50,9 @@ h4{
 #btn1 {
   position: absolute;
   width: 50%;
-  top: 50%;
+  top: 15%;
   left: 30%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -40%);
   background-color: #B02737;
   color: white;
   padding: 0.5% 2%;
@@ -65,4 +77,8 @@ h4{
 
 #btn4:hover {
   background-color: #96343f;
+}
+
+#btn5:hover {
+  background-color: #891421;
 }
