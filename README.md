@@ -48,10 +48,10 @@ We focus on a **website** and its **mobile adjusting**.
 - Trial mode available for visitors as well(no need to log in, but functionalities would be limited)
 
 ## How are we different with similar platforms?
-- react-recipe-app https://github.com/Orbital-B612/react-recipe-app
+- [react-recipe-app](https://github.com/hamza-mirza/react-recipe-app)
 
   This app can only use api to show as a search outcome. we plan to add nutrition api and food information collected in NUS canteens.
-- food-help https://github.com/Orbital-B612/food-help 
+- [food-help](https://github.com/brtsai/food-help)
 
   This app can search restaurants but can't search for concrete food. We plan to add detailed food information.
 
