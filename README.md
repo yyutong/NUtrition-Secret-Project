@@ -3,6 +3,15 @@ A website help students find food on campus and track energy intaking.
 
 Website address: https://nutrition-secret.herokuapp.com/
 
+If you want to run it locally
+- fork and download this repo
+- run `npm install` in repo folder
+- then run `npm start`
+- run `cd frontend` 
+- run `npm install` & `npm start`
+
+then you can see it on localhost:3000
+
 ## Tech Stack
 ReactJS, Express, Node and MongoDB Atlas.
 
