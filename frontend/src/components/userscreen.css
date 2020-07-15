@@ -11,6 +11,7 @@
   border-radius: 5px;
 
 }
+/* zakir tikka position */
 
 #btn5 {
   position: absolute;
@@ -23,7 +24,7 @@
   padding: 0.5% 2%;
   border-radius: 5px;
 }
-
+/* Fine Food position */
 h4{
   font-weight: bold;
 }
@@ -42,7 +43,7 @@ h4{
   padding: 0.5% 2%;
   border-radius: 5px;
 }
-
+/* Flavours position */
 #btn2:hover {
   background-color: #891421;
 }
@@ -58,7 +59,7 @@ h4{
   padding: 0.5% 2%;
   border-radius: 5px;
 }
-
+/* Chop Chop position */
 #btn3:hover {
   background-color: #891421;
 }
@@ -74,7 +75,7 @@ h4{
   padding: 0.5% 2%;
   border-radius: 5px;
 }
-
+/* Jammin Java position */
 #btn4:hover {
   background-color: #96343f;
 }
