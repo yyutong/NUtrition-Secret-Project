@@ -7,6 +7,10 @@ const OrderSchema = new Schema({
         type: Number,
         required: true
     },
+    customer_name: {
+        type: String,
+        required: true
+    },
     customer_email: {
         type: String,
         required: true
@@ -32,14 +36,18 @@ const OrderSchema = new Schema({
         required: true
     },
     del_time:{
-        type: Date,
-        default: Date.now 
+        type: String,
+        required: true 
     },
     status:{
         type: String,
         required:true
     },
     instructions:{
+        type: String,
+        required: true
+    },
+    rating:{
         type: String,
         required: true
     }
