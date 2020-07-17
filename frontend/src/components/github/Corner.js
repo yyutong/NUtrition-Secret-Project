@@ -4,7 +4,7 @@ import './style.css';
 
 export default () => (
   <a
-    href="https://github.com/hamza1220/CEat"
+    href="https://github.com/Persdre/NUtrition-Secret-Project"
     className="github-corner"
     aria-label="View source on Github"
   >

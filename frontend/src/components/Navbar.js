@@ -5,12 +5,13 @@ import { connect } from 'react-redux';
 import { logoutUser } from '../actions/authentication';
 import { withRouter } from 'react-router-dom';
 import { Button, Modal, Table} from 'react-bootstrap';
+import logo from './whiteEdited.png'
 // import Toolbar from './toolbar.js'
 // import SideDrawer from './SideDrawer.js'
 // import BackDrop from './BackDrop.js'
 import './Navbar.css'
 // import Search from './Search'
-import './NavbarStyle.css'
+// import './Search.css'
 
 class Navbar extends Component {
     constructor(props) {
@@ -42,21 +43,56 @@ class Navbar extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        console.log(JSON.stringify(this.state.value))
-        fetch('api/search', {  
-            method: 'post',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({ "user": {
-              "search" : this.state.value}
-            }),
+        let convUpperCase= new Promise((resolve,reject)=>{
+        	var queryArray= this.state.value.split(" ")
+        	var finalString= ""
+        	for(var i=0;i<queryArray.length;i++){
+        		queryArray[i]= queryArray[i].charAt(0).toUpperCase() + queryArray[i].slice(1);
+        		finalString= finalString+queryArray[i]+" "
+        	}
+        	var newStr = finalString.substring(0, finalString.length-1);
+        	// console.log(finalString.length)
+        	// console.log(newStr.length)
+        	resolve(newStr)
         })
-        .then(res => {
-          res.json().then(body => {
-            console.log(body)
-            this.setState({results: body})
-            this.handleShow(body);
-        }); 
-      })
+        convUpperCase.then(searchString=>{
+	        fetch('api/search', {  
+	            method: 'post',
+	            headers: {'Content-Type': 'application/json'},
+	            body: JSON.stringify({ "user": {
+	              "search" : searchString}
+	            }),
+	        })
+	        .then(res => {
+	          res.json().then(body => {
+	          	// console.log("Body is" , body, body[1], "")
+	            var finalArray= []
+	            let p= new Promise((resolve, reject)=>{
+	            	finalArray = body
+	            	// for(var i=0;i<body.length;i++){
+	            	// 	var element= body[i]
+	            	// 	for(var j=0;j<element.length;j++){
+	            	// 		finalArray.push(element[j])
+	            	// 	}
+	            	// }
+
+	            	// for(var i=0;i<finalArray.length;i++){
+	            	// 	var currElement= finalArray[i]
+	            	// 	for(var j=i+1;j<finalArray.length;j++){
+	            	// 		if(finalArray[j].item_id==currElement.item_id){
+	            	// 			finalArray.splice(j, 1)
+	            	// 		}
+	            	// 	}
+	            	// }
+	            	resolve(finalArray)
+	            })
+	            p.then(array=>{
+		            this.setState({results: array})
+		            this.handleShow(array);
+	            })
+	        }); 
+	      })	
+        })
     }
 
     onLogout(e) {
@@ -80,18 +116,16 @@ class Navbar extends Component {
                     <Link to="/userscreen"><button>Restaurants</button></Link>
                 </li>
                 <li >
-                    <Link to="/orders"><button>History</button></Link>
+                    <Link to="/orders"><button>Orders</button></Link>
                 </li>
                 <li >
-                    <Link to=""><button>Main</button></Link>
-                </li> 
-                
-                
-                <li >
-                    <form onSubmit={this.handleSubmit} style={{border: "none", height: "80%"}}>
+                    <form onSubmit={this.handleSubmit} style={{border: "none", height: "100%"}}>
                         <input type="text" placeholder= "Search for food" value={this.state.value} onChange={this.handleChange}/>
-                        <button className="searchButton"></button>
+                        <button className="searchButton" ></button>
                     </form>
+                </li>
+                <li style={{float: "left"}}>
+                	<a href= "/"><img src={logo}/></a>
                 </li>
             </ul>
 
@@ -109,8 +143,36 @@ class Navbar extends Component {
                 <li >
                     <Link to="/rest_orders"><button>Orders</button></Link>
                 </li>
+                <li style={{float: "left"}}>
+                    <a href= "/"><img src={logo}/></a>
+                </li>
             </ul>
 
+
+        )
+        const manager1 = (
+            <ul id ="nav">
+                <li >
+                    <button onClick={this.onLogout.bind(this)}>
+                        Logout
+                    </button>
+                </li>
+                <li >
+                    <Link to="/editprofile"><button>Profile</button></Link>
+                </li>
+                <li >
+                    <Link to="/rest_rating"><button>View Rating</button></Link>
+                </li>
+                <li >
+                    <Link to="/editMenu"><button>Edit Menu</button></Link>
+                </li>
+                <li >
+                    <Link to="/rest_orders"><button>Orders</button></Link>
+                </li>
+                <li style={{float: "left"}}>
+                    <a href= "/"><img src={logo}/></a>
+                </li>
+            </ul>
         )
 
         const guestLinks = (
@@ -148,7 +210,8 @@ class Navbar extends Component {
         )
         return(
                 <div>
-                    {isAuthenticated ? (user.user_type==="customer"? customer1 : cashier1) : guestLinks}
+                    {isAuthenticated ? (user.user_type==="customer"? customer1 : 
+                        (user.user_type.split("_")[0]==="manager"? manager1 :cashier1)) : guestLinks}
                     <Modal show={this.state.show} onHide={this.handleClose}>
                       <Modal.Header closeButton>
                         <Modal.Title>Results here</Modal.Title>

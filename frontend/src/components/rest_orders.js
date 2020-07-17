@@ -59,7 +59,24 @@ class rest_orders extends Component {
     console.log("new",close)
     close=false
     var restaurant_name = String(this.props.auth.user.user_type).split('_')[1]
+    
+    // Fetch orders instantly the first time.
+    axios.post('/getrestorders', {
+        restaurant_name: restaurant_name,
+        })
+      .then((response) => {
+        // console.log(this.state.close)
+        // if(close===false){
+          this.setState({orders: response.data})
+          // console.log(response.data)
+          received=true
+        // }
+
+      })
+    ///////////////////////////////////////////
+
     this.interval(() => {
+      // console.log("Loop")
       axios.post('/getrestorders', {
         restaurant_name: restaurant_name,
         })
@@ -98,14 +115,24 @@ class rest_orders extends Component {
 
     }
 
-    changeStatus(e,status,id) {
+    changeStatus(e,status,id, time, order_time) {
         e.preventDefault()
         if(status==="pending")
         {
+          let hrs=  (parseInt(order_time.split('T')[1].split('.')[0], 10)+5)%24
+          let min = parseInt((order_time.split('T')[1]).split(':')[1], 10) 
+          let sec = (order_time.split('T')[1]).split(':')[2].split('.')[0]
+
+          let extra_hr = parseInt((min +time)/60 , 10)  
+          min = (min + time)%60
+          hrs = hrs+ extra_hr
+          let delivery = hrs.toString(10) + ':' + min.toString(10) + ':' + sec
+          // console.log(delivery)
+
           status = "processing"
           fetch('/processing', {
             method: 'POST',
-            body: JSON.stringify({orderID: id}),
+            body: JSON.stringify({orderID: id , del_time: delivery}),
             headers: {
               "Content-Type": "application/json",
             }
@@ -114,10 +141,23 @@ class rest_orders extends Component {
         }
         else if (status==="processing")
         {
+          let delivery = (order_time.toString())
+          let date = delivery.split(' ')
+          let day = date[2]
+          if (day.length===1){
+            day= "0"+day
+          }
+          let month = "JanFebMarAprMayJunJulAugSepOctNovDec".indexOf(date[1]) / 3 + 1 
+          if (month<10){
+            month="0"+month
+          }
+          let x = date[2] +"-"+month+"-"+date[3]+ "  "+date[4]
+          console.log(x)
+
           status = "delivered"
           fetch('/delivered', {
             method: 'POST',
-            body: JSON.stringify({orderID: id}),
+            body: JSON.stringify({orderID: id, del_time: x}),
             headers: {
               "Content-Type": "application/json",
             }
@@ -153,23 +193,45 @@ class rest_orders extends Component {
         const acc= "Accept Order"
         const send = "Change Status to Delivered"
 
+
         const pendingOrders = pending.map((d,i) => 
           <div id="orderdiv" key={i}>
               <div id = "list"> 
                       <ul id = "uList">
                           <li id = "resName">Order#: {d.orderID}</li>
+                          <li>&nbsp;&nbsp;&nbsp;Customer Name: &nbsp; {d.customer_name}</li>
                           <li>&nbsp;&nbsp;&nbsp;Phone Number: &nbsp; {d.customer_number}</li>
                           <li>&nbsp;&nbsp;&nbsp;Order Placed at: &nbsp; {(d.order_time).split('T')[0].split('-')[2]}-{(d.order_time).split('T')[0].split('-')[1]}-{(d.order_time).split('T')[0].split('-')[0]} &nbsp;&nbsp; {(parseInt(d.order_time.split('T')[1].split('.')[0], 10)+5)%24 }:{(d.order_time.split('T')[1]).split(':')[1]}:{(d.order_time.split('T')[1]).split(':')[2].split('.')[0]} </li>                            
                           <li>&nbsp;&nbsp;&nbsp;Location: &nbsp; {d.del_location}</li>
                           <li>&nbsp;&nbsp;&nbsp;Instructions: &nbsp;{d.instructions}</li>
+                          <li>&nbsp;&nbsp;&nbsp;Expected Delivery by: &nbsp;{d.del_time}</li>
                           <div id="btnn">
                             <Button variant="danger" title="View Bill" onClick={()=>{this.handleShow(d.items, d.orderID)}}>
-                                View
+                                View Details
                             </Button>
                             &nbsp;&nbsp;&nbsp;
-                            <Button variant={d.status==="pending"? "warning" : "info"  } title="Order Status" onClick={(e)=>{this.changeStatus(e,d.status, d.orderID)}}>
-                                {d.status==="delivered"? del: (d.status==="pending"? acc: send) }
-                            </Button>
+
+                            {d.status ==="pending"?
+                              <div>
+                                Accept Order and Set Time to Deliver:
+                                <Button variant="warning" title="Deliver in 15 minutes" onClick={(e)=>{this.changeStatus(e,d.status, d.orderID, 15, d.order_time)}}>
+                                    15 Mins
+                                </Button>
+                                <Button variant="warning" title="Deliver in 30 minutes" onClick={(e)=>{this.changeStatus(e,d.status, d.orderID, 30, d.order_time)}}>
+                                    30 Mins
+                                </Button>
+                                <Button variant="warning" title="Deliver in 45 minutes" onClick={(e)=>{this.changeStatus(e,d.status, d.orderID, 45, d.order_time)}}>
+                                    45 Mins
+                                </Button>
+
+                              </div>
+
+                              :
+
+                              <Button variant="info" title="Order Status" onClick={(e)=>{this.changeStatus(e,d.status, d.orderID, -1, Date(Date.now()))}}>
+                                  {send}
+                              </Button>
+                            }
                           </div>
                       </ul>
               </div>
@@ -180,16 +242,20 @@ class rest_orders extends Component {
           <div id="orderdiv" key={i}>
               <div id = "list"> 
                       <ul id = "uList">
-                          <li id = "resName">{d.restaurant_name}</li>
+                          <li id = "resName">Order#: {d.orderID}</li>
+                          <li>&nbsp;&nbsp;&nbsp;Customer Name: &nbsp; {d.customer_name}</li>
+                          <li>&nbsp;&nbsp;&nbsp;Phone Number: &nbsp; {d.customer_number}</li>
                           <li>&nbsp;&nbsp;&nbsp;Order Placed at: &nbsp; {(d.order_time).split('T')[0].split('-')[2]}-{(d.order_time).split('T')[0].split('-')[1]}-{(d.order_time).split('T')[0].split('-')[0]} &nbsp;&nbsp; {(parseInt(d.order_time.split('T')[1].split('.')[0], 10)+5)%24 }:{(d.order_time.split('T')[1]).split(':')[1]}:{(d.order_time.split('T')[1]).split(':')[2].split('.')[0]} </li>                            
                           <li>&nbsp;&nbsp;&nbsp;Location: &nbsp; {d.del_location}</li>
                           <li>&nbsp;&nbsp;&nbsp;Instructions: &nbsp;{d.instructions}</li>
+                          <li>&nbsp;&nbsp;&nbsp;Delivered at: &nbsp;{d.del_time}</li>
+
                           <div id="btnn">
                             <Button variant="danger" title="View Bill" onClick={()=>{this.handleShow(d.items, d.orderID)}}>
-                                View
+                                View Details
                             </Button>
                             &nbsp;&nbsp;&nbsp;
-                            <Button variant="success" title="Order Status" onClick={(e)=>{this.changeStatus(e,d.status, d.orderID)}}>
+                            <Button variant="success" title="Order Status" onClick={(e)=>{this.changeStatus(e,d.status, d.orderID, -1, d.order_time)}}>
                                 {d.status==="delivered"? del: (d.status==="pending"? acc: send) }
                             </Button>
                           </div>
@@ -212,11 +278,11 @@ class rest_orders extends Component {
               </div>
         )
 
-        const none2 = (
-              <div>
-                  <h6 id="none"> You Have No Completed Orders Yet</h6>
-              </div>
-        )
+        // const none2 = (
+        //       <div>
+        //           <h6 id="none"> You Have No Completed Orders Yet</h6>
+        //       </div>
+        // )
 
         const loading = (
               <div>
@@ -233,21 +299,21 @@ class rest_orders extends Component {
                 </MetaTags>
 
                 <div className = "borderx">
-                    <h4 className = "heading3">Pending Orders</h4>
+                    <h4 className = "heading3">Orders</h4>
                     <br/>
                     {check1 ? pendingOrders: (received ? none:loading)}
                     <br/>
                 </div>
-                <div className = "borderx">
+                {/* <div className = "borderx">
                     <h4 className = "heading3">Completed Orders</h4>
                     <br/>
                     {check2 ? completedOrders: (received ? none2: loading)}
                     <br/>
-                </div>
+                </div> */}
 
                 <Modal show={this.state.show} onHide={this.handleClose}>
                   <Modal.Header closeButton>
-                    <Modal.Title>Calorie for Order# {this.state.orderID}</Modal.Title>
+                    <Modal.Title>Order Bill for Order# {this.state.orderID}</Modal.Title>
                   </Modal.Header>
                   <Modal.Body>
                     <Table>
@@ -255,7 +321,7 @@ class rest_orders extends Component {
                             <tr>
                                 <th>Item ID</th>
                                 <th>Name</th>
-                                <th>Calorie</th>
+                                <th>Price</th>
                             </tr>
                         </thead>
                             <tbody>
@@ -263,7 +329,7 @@ class rest_orders extends Component {
 
                             <tr> 
                                 <td> </td>
-                                <td> <b>Total Calorie</b> </td>
+                                <td> <b>Total Order Price</b> </td>
                                 <td> <b>{this.state.total}</b> </td>
                             </tr>
                             </tbody>

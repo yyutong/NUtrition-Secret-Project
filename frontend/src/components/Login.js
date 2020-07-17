@@ -75,7 +75,7 @@ class Login extends Component {
             <br/> <br/> <br/> <br/>
             <img id="logo" src={logo} width='30%' height="30%" alt="CE Logo"/>
             <br/> 
-            <h2 className="heading">Login to NUtrition Secret</h2>
+            <h2 className="heading">Login to NUtrition Secret </h2>
             <br/>
             <div className='infocontainer'>
                 <form onSubmit={ this.handleSubmit }>

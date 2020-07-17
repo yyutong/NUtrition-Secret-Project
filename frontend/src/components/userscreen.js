@@ -8,6 +8,7 @@ import { connect } from 'react-redux';
 import { setRestaurant } from '../actions/restaurant';
 import { Link, Redirect } from 'react-router-dom';
 
+// let auth1 = {}
 
 class Userscreen extends Component {
  	constructor(props){
@@ -17,23 +18,21 @@ class Userscreen extends Component {
  			r1:'',
  			r2:'',
  			r3:'',
-			r4:'',
-			r5:''
+ 			r4:'',
  		};
         this.handleClick1 = this.handleClick1.bind(this);
  	}
     
 	componentDidMount(){
 		fetch('api/rest-ratings', {
-	      method: 'GET'
+	      method: 'POST'
 	    })
 	    .then(res => res.json())
 	    .then(body =>{
 	    	this.setState({r1: body.Z})
 	    	this.setState({r2: body.C})
 	    	this.setState({r3: body.J})
-			this.setState({r4: body.F})
-			this.setState({r5: body.D})
+	    	this.setState({r4: body.F})
 	    })
 	}
 
@@ -46,6 +45,8 @@ class Userscreen extends Component {
 
     render() {
         return (
+        <div>
+            
             <div>
                 <MetaTags>
                     <meta charSet="utf-8" name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -66,7 +67,7 @@ class Userscreen extends Component {
                     <div id="btn2">
                 		<h4> Jammin Java </h4>
                 		<div>
-                		<StarRatingComponent name="Jammin Java" editing={false} starCount={5} value={parseInt(this.state.r3, 10)}/>
+                		<StarRatingComponent name="JamminJava" editing={false} starCount={5} value={parseInt(this.state.r3, 10)}/>
                 		</div>
                 	</div>
             	</Link>
@@ -85,7 +86,7 @@ class Userscreen extends Component {
                 	<div id="btn4">
                 		<h4> Zakir Tikka </h4> 
                 		<div>
-                		<StarRatingComponent name="Zakir Tikka" editing={false} starCount={5} value={parseInt(this.state.r1, 10)}/>
+                		<StarRatingComponent name="Zakir" editing={false} starCount={5} value={parseInt(this.state.r1, 10)}/>
                 		</div>
                 	</div>
                 </Link>
@@ -98,14 +99,17 @@ class Userscreen extends Component {
                 		</div>
                 	</div>
                 </Link>
-
+				
             </div>
+
+        </div>
         );
     }
 }
 
 const mapStateToProps = (state) => ({
     rest: state.rest,
+    auth: state.auth
 })
 
 export  default connect(mapStateToProps, { setRestaurant })(Userscreen)

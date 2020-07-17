@@ -301,7 +301,7 @@ class editMenu extends Component {
 	    		<div id= "items" > 
 	    		    <div>&nbsp; {d.name} </div>
 	    			<div className="spacer"/>
-		    		<div> Rs.{d.price} &nbsp; </div>
+		    		<div> Cal.{d.price} &nbsp; </div>
 	    		</div>
 		 	<Button variant="info" className="itemButton" title="Edit this item" onClick = {(e)=>{this.handleShow1(e,d.item_id, d.name, d.price, d.category)}}> &nbsp; Edit &nbsp; &nbsp; </Button>  
 		 	<Button variant="danger" className="itemButton" title="Remove this item from inventory" 
@@ -316,7 +316,7 @@ class editMenu extends Component {
 	    		<div id= "items" > 
 	    		    <div>&nbsp; {d.name} </div>
 	    			<div className="spacer"/>
-		    		<div> Rs.{d.price} &nbsp; </div>
+		    		<div> Cal.{d.price} &nbsp; </div>
 	    		</div>
 		 	<Button variant="info" className="itemButton" title="Edit this item" onClick = {(e)=>{this.handleShow1(e,d.item_id, d.name, d.price, d.category)}}> &nbsp; Edit &nbsp; &nbsp; </Button>  
 		 	<Button variant="danger" className="itemButton" title="Remove this item from inventory"
@@ -331,7 +331,7 @@ class editMenu extends Component {
 	    		<div id= "items" > 
 	    		    <div>&nbsp; {d.name} </div>
 	    			<div className="spacer"/>
-		    		<div> Rs.{d.price} &nbsp; </div>
+		    		<div> Cal.{d.price} &nbsp; </div>
 	    		</div>
 		 	<Button variant="info" className="itemButton" title="Edit this item" onClick = {(e)=>{this.handleShow1(e,d.item_id, d.name, d.price, d.category)}}> &nbsp; Edit &nbsp; &nbsp; </Button>  
 		 	<Button variant="danger" className="itemButton" title="Remove this item from inventory"
