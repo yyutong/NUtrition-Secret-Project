@@ -16,27 +16,28 @@ class Search extends Component{
     }
 
     handleSubmit(event) {
+        console.log("searched eee")
         event.preventDefault();
-        console.log(JSON.stringify(this.state.value).toLowerCase())
-        fetch('api/form-search', {  
-            method: 'post',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({ "user": {
-              "search" : this.state.value.toLowerCase()}
-            }),
-        })
-        .then(res => {
-          res.json().then(body => {
-            console.log(body)
-        }); 
-      })
+      //   console.log(JSON.stringify(this.state.value))
+      //   fetch('api/form-search', {  
+      //       method: 'post',
+      //       headers: {'Content-Type': 'application/json'},
+      //       body: JSON.stringify({ "user": {
+      //         "search" : this.state.value}
+      //       }),
+      //   })
+      //   .then(res => {
+      //     res.json().then(body => {
+      //       console.log(body)
+      //   }); 
+      // })
     }
 
     render(){
     	return(
     		<div>
-            	<form style={{border: "none"}} onSubmit={this.handleSubmit}>
-                    <button className="searchButton"/>
+            	<form style={{border: "none", height: "100%"}} onSubmit={this.handleSubmit}>
+                    <button id="searchButton"/>
                     <input placeholder= "Search for food" type="text" value={this.state.value} onChange={this.handleChange}/>
                 </form>
     		</div>
