@@ -17,12 +17,12 @@ class Search extends Component{
 
     handleSubmit(event) {
         event.preventDefault();
-        console.log(JSON.stringify(this.state.value.toLowerCase))
+        console.log(JSON.stringify(this.state.value).toLowerCase())
         fetch('api/form-search', {  
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({ "user": {
-              "search" : this.state.value.toLowerCase}
+              "search" : this.state.value.toLowerCase()}
             }),
         })
         .then(res => {
