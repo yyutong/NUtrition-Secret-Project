@@ -1,0 +1,77 @@
+#items{
+	background-color: #EEEEEE;
+	width: 100%;
+	display: flex;
+  border-bottom: 1px solid #898989;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  align-items: center
+}
+
+#DD{
+  display: flex;
+}
+
+.spacer{
+  flex: 1;  
+}
+
+#lol{
+  display: flex;
+
+}
+
+.itemButton{
+  color: #FFF;
+  padding-top: 1.5%;
+  align-items: center;
+  font-weight: bolder;
+
+}
+
+#cartstyle{
+  float:right;
+  margin-right: 1%;
+  text-align: center;
+  display: inline-flex;
+  margin-top: 1%;
+  background-color: #B02737;
+}
+
+#cartstyle:hover{
+  background-color: #891421;
+}
+
+#spann{
+  margin-left: -3%;
+}
+
+#cartHeading{
+  float: right;
+  margin-left: 7%;
+  margin-top: 5%;
+  display: inline-block;
+  font-weight: bold;
+}
+
+#heading{
+	padding-top: 7%;
+	color: #626262;
+}
+
+#lol div:hover{
+  background-color: #CCC;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#heading1 {
+  color: #626262;
+  font-size: small;
+}
+
+html{
+  height: 100%;
+}
+#bg{
+  width: 100%;
+}
