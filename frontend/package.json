@@ -3,11 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "acorn": "^7.3.1",
     "axios": "^0.18.1",
     "bootstrap": "^4.3.1",
     "classnames": "^2.2.6",
+    "js-yaml": "^3.14.0",
     "jwt-decode": "^2.2.0",
     "mem": "^6.1.0",
+    "minimist": "^1.2.5",
     "react": "^16.4.1",
     "react-bootstrap": "^1.0.0-beta.8",
     "react-dom": "^16.4.1",
@@ -20,7 +23,8 @@
     "react-star-ratings": "^2.3.0",
     "redux": "^4.0.0",
     "redux-devtools-extension": "^2.13.8",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "set-value": "^3.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
