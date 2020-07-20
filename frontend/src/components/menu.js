@@ -272,12 +272,6 @@ class Menu extends Component {
 				<br/>
 				<h4 className="heading">Drinks</h4>
 				{drink_items}
-
-				<div id="fb-root"></div>
-                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_CN/sdk.js#xfbml=1&version=v7.0" nonce="NhYgDMHv"></script> 
-
-				<div class="fb-comments" data-href="http://localhost:3000/menu" data-numposts="5" data-width=""></div>
-
             </div>
         );
     }
