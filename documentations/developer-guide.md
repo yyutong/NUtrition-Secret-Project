@@ -20,7 +20,7 @@ then you can see the frontend displays on localhost:3000, the server runs at loc
 
 ## Software Engineering Principles Application
 
-- Separation of Concerns
+### Separation of Concerns
 >Separation of concerns is a recognition of the need for human beings to work within a limited context. As descibed by G. A. Miller [Miller56], the human mind is limited to dealing with approximately seven units of data at a time. A unit is something that a person has learned to deal with as a whole - a single abstraction or concept. Although human capacity for forming abstractions appears to be unlimited, it takes time and repetitive use for an abstraction to become a useful tool; that is, to serve as a unit.
 
   We separate frontend and backend development. We first decided what tech stacks for frontend and backend separately. Then we made a decision to use ReactJS for frontend and MongoDB for backend. Frontend and backend are not disturbed each other which is easy for us to debug them.
