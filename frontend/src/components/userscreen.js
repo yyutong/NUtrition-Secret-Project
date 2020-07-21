@@ -20,7 +20,10 @@ class Userscreen extends Component {
  			r3:'',
 			r4:'',
 			r5:'',
-			r6:''
+			r6:'',
+            r7:'',
+            r8:''
+
  		};
         this.handleClick1 = this.handleClick1.bind(this);
  	}
@@ -111,6 +114,24 @@ class Userscreen extends Component {
                 		<StarRatingComponent name="Pines" editing={false} starCount={5} value={parseInt(this.state.r6, 10)}/>
                 		</div>
                 	</div>
+                </Link>
+
+                <Link to ={{ pathname: '/menu', state: { id: 'The Frontier' }}}>
+                    <div id="btn7">
+                        <h4> The Frontier </h4> 
+                        <div>
+                        <StarRatingComponent name="The Frontier" editing={false} starCount={5} value={parseInt(this.state.r7, 10)}/>
+                        </div>
+                    </div>
+                </Link>
+
+                <Link to ={{ pathname: '/menu', state: { id: 'The Deck' }}}>
+                    <div id="btn8">
+                        <h4> The Deck </h4> 
+                        <div>
+                        <StarRatingComponent name="The Deck" editing={false} starCount={5} value={parseInt(this.state.r8, 10)}/>
+                        </div>
+                    </div>
                 </Link>
 				
             </div>
