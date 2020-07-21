@@ -27,7 +27,7 @@ then you can see the frontend displays on localhost:3000, the server runs at loc
 
   For features, we also obey this rule. At one time we only developed one feature. For example, in the first few weeks, we focused on sign up and log in. In the next several weeks, we focused on frontend design. After our frontend had a basic frame, we turned to the backend.
 
-- KISS (Keep It Simple, Stupid!)
+### KISS (Keep It Simple, Stupid!)
 > KISS might just be the engineer's motto. We've acknowledged our tendencies to build overly complex systems at times (there are anonymous meetings for this kind of thing) and it's forced us to admit that simplicity makes your solution so much better.
 
   We want to achieve two main goals in our website.
@@ -36,7 +36,7 @@ then you can see the frontend displays on localhost:3000, the server runs at loc
 
   To make things easier, we chose a simple design. A user can figure out how to use it immediately. For every food item, calorie information is on the same bar. Search box is also at a obvious position.
 
-- DRY (Don't Repeat Yourself)
+### DRY (Don't Repeat Yourself)
 > one of the best things about code is how reusable it is. If you write a cool bit of code that solves a useful problem in one place, refer back to it when the problem comes up in other places as well. From your perspective, any time you find yourself manually typing something in multiple times, there's a way to combine it all into a single task that gets run multiple times.
 
   We keep the same design for the same level. The code is reusable for the same levels which saves much time.
