@@ -5,7 +5,7 @@
   width: 50%;
   top: 15%;
   left: 30%;
-  transform: translate(-50%, 240%);
+  transform: translate(-50%, 220%);
   background-color: #B02737;
   color: white;
   padding: 0.5% 2%;
@@ -40,6 +40,37 @@
 }
 /* Pines position */
 
+#btn7 {
+  position: absolute;
+  width: 50%;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, 310%);
+  background-color: #B02737;
+  color: white;
+  padding: 0.5% 2%;
+  border-radius: 5px;
+}
+/* Frontier position */
+
+#btn8 {
+  position: absolute;
+  width: 50%;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, 310%);
+  background-color: #B02737;
+  color: white;
+  padding: 0.5% 2%;
+  border-radius: 5px;
+}
+/* Frontier position */
+
+
+h4{
+  font-weight: bold;
+}
+
 h4{
   font-weight: bold;
 }
@@ -63,7 +94,7 @@ h4{
   width: 50%;
   top: 15%;
   left: 30%;
-  transform: translate(-50%, -15%);
+  transform: translate(-50%, -40%);
   background-color: #B02737;
   color: white;
   padding: 0.5% 2%;
@@ -105,5 +136,13 @@ h4{
 }
 
 #btn6:hover {
+  background-color: #891421;
+}
+
+#btn7:hover {
+  background-color: #891421;
+}
+
+#btn8:hover {
   background-color: #891421;
 }
