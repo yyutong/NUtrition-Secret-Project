@@ -132,7 +132,11 @@ All the following tests are carried out on https://nutrition-secret.herokuapp.co
 
 ## User Guide
 
+https://github.com/Persdre/NUtrition-Secret-Project/blob/master/documentations/user-guide.md
+
+
 ## Developer Guide 
 
+https://github.com/Persdre/NUtrition-Secret-Project/blob/master/documentations/developer-guide.md
 
 
