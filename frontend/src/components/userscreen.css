@@ -1,10 +1,11 @@
 /* Style the button and place it in the middle of the container/image */
+
 #btn4 {
   position: absolute;
   width: 50%;
   top: 15%;
   left: 30%;
-  transform: translate(-50%, 260%);
+  transform: translate(-50%, 220%);
   background-color: #B02737;
   color: white;
   padding: 0.5% 2%;
@@ -18,20 +19,31 @@
   width: 50%;
   top: 50%;
   left: 30%;
-  transform: translate(-50%, 260%);
+  transform: translate(-50%, 190%);
   background-color: #B02737;
   color: white;
   padding: 0.5% 2%;
   border-radius: 5px;
 }
 /* Fine Food position */
+
+#btn6 {
+  position: absolute;
+  width: 50%;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, 310%);
+  background-color: #B02737;
+  color: white;
+  padding: 0.5% 2%;
+  border-radius: 5px;
+}
+/* Pines position */
+
 h4{
   font-weight: bold;
 }
 
-#btn1:hover {
-  background-color: #891421;
-}
 #btn3 {
   position: absolute;
   width: 50%;
@@ -44,9 +56,7 @@ h4{
   border-radius: 5px;
 }
 /* Flavours position */
-#btn2:hover {
-  background-color: #891421;
-}
+
 
 #btn1 {
   position: absolute;
@@ -60,26 +70,40 @@ h4{
   border-radius: 5px;
 }
 /* Chop Chop position */
-#btn3:hover {
-  background-color: #891421;
-}
 
 #btn2 {
   position: absolute;
   width: 50%;
   top: 50%;
   left: 30%;
-  transform: translate(-50%, 100%);
+  transform: translate(-50%, 60%);
   background-color: #B02737;
   color: white;
   padding: 0.5% 2%;
   border-radius: 5px;
 }
 /* Jammin Java position */
+
+#btn1:hover {
+  background-color: #891421;
+}
+
+#btn2:hover {
+  background-color: #891421;
+}
+
+#btn3:hover {
+  background-color: #891421;
+}
+
 #btn4:hover {
   background-color: #96343f;
 }
 
 #btn5:hover {
+  background-color: #891421;
+}
+
+#btn6:hover {
   background-color: #891421;
 }
