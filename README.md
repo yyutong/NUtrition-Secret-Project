@@ -130,7 +130,9 @@ All the following tests are carried out on https://nutrition-secret.herokuapp.co
 
 
 
+## User Guide
 
+## Developer Guide 
 
 
 
