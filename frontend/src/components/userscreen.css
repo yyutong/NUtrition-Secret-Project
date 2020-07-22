@@ -63,7 +63,7 @@ h4{
   width: 50%;
   top: 50%;
   left: 30%;
-  transform: translate(-50%, -180%);
+  transform: translate(-50%, -200%);
   background-color: #B02737;
   color: white;
   padding: 0.5% 2%;
@@ -90,7 +90,7 @@ h4{
   width: 50%;
   top: 50%;
   left: 30%;
-  transform: translate(-50%, 70%);
+  transform: translate(-50%, 60%);
   background-color: #B02737;
   color: white;
   padding: 0.5% 2%;
