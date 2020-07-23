@@ -191,7 +191,7 @@ class Menu extends Component {
 	    		<div id= "items" > 
 	    		    <div>&nbsp; {d.name} </div>
 	    			<div className="spacer"/>
-		    		<div> Rs.{d.price} &nbsp; </div>
+		    		<div> Cal.{d.price} &nbsp; </div>
 	    		</div>
 		 	<button id='b2' title="Add to cart" onClick = {(e)=> {this.addToCart(e,d.item_id,d.name,d.price, d.category)}}> &nbsp; + &nbsp; &nbsp; </button>  
     		</div>
@@ -202,7 +202,7 @@ class Menu extends Component {
 	    		<div id= "items" > 
 	    		    <div>&nbsp; {d.name} </div>
 	    			<div className="spacer"/>
-		    		<div> Rs.{d.price} &nbsp; </div>
+		    		<div> Cal.{d.price} &nbsp; </div>
 	    		</div>
 		 	<button id='b2' title="Add to cart" onClick = {(e)=> {this.addToCart(e,d.item_id,d.name,d.price, d.category)}}> &nbsp; + &nbsp; &nbsp; </button>  
     		</div>
@@ -256,7 +256,7 @@ class Menu extends Component {
 
 		         <form onSubmit={(e)=>{this.placeOrder(e,this.props.auth.user.name,this.props.auth.user.email,this.props.auth.user.number)}}>
 	                <label>
-	                    Delivery Location &nbsp; &nbsp; &nbsp;  
+	                    Breakfast/Lunch/Dinner &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  
 	                    <input
 	                    type="text"
 	                    placeholder="Location to deliver to"
@@ -267,7 +267,7 @@ class Menu extends Component {
 	                <br/>
 
 	                <label>
-	                	Special Instructions &nbsp;
+	                	Ideal Calorie Intake &nbsp;
 	                    <input
 	                    type="text"
 	                    placeholder="Instructions"
