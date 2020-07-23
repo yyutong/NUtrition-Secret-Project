@@ -267,7 +267,7 @@ class Menu extends Component {
 	                <br/>
 
 	                <label>
-	                	Ideal Calorie Intake &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+	                	Ideal Calorie Intake &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 	                    <input
 	                    type="text"
 	                    placeholder="Instructions"
@@ -342,10 +342,6 @@ class Menu extends Component {
 				<h4 id="heading2">Drinks</h4>
 				{drink_items}
 				<br/>
-	            <h4 id = "heading2">Promotions</h4>
-				{promo_items}
-				<br/>
-
 		        	{this.state.showmessage? view_message:view_cart}
             </div>
         	}
