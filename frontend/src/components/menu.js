@@ -241,14 +241,14 @@ class Menu extends Component {
 		          		<tr>
 			          		<th>Item ID</th>
 			          		<th>Name</th>
-			          		<th>Price</th>
+			          		<th>Calories</th>
 		          		</tr>
 		          	</thead>
 		          		<tbody>
 			          		{cart_table}
 			          	<tr> 
 			          		<td> </td>
-			          		<td> <b>Total Order Price</b> </td>
+			          		<td> <b>Total Order Calories</b> </td>
 			          		<td> <b>{this.state.total}</b> </td>
 			          	</tr>
 						</tbody>
@@ -256,7 +256,7 @@ class Menu extends Component {
 
 		         <form onSubmit={(e)=>{this.placeOrder(e,this.props.auth.user.name,this.props.auth.user.email,this.props.auth.user.number)}}>
 	                <label>
-	                    Breakfast/Lunch/Dinner &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  
+	                    Breakfast/Lunch/Dinner &nbsp;
 	                    <input
 	                    type="text"
 	                    placeholder="Location to deliver to"
@@ -267,7 +267,7 @@ class Menu extends Component {
 	                <br/>
 
 	                <label>
-	                	Ideal Calorie Intake &nbsp;
+	                	Ideal Calorie Intake &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 	                    <input
 	                    type="text"
 	                    placeholder="Instructions"
