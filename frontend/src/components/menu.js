@@ -259,7 +259,7 @@ class Menu extends Component {
 	                    Breakfast/Lunch/Dinner &nbsp;
 	                    <input
 	                    type="text"
-	                    placeholder="Location to deliver to"
+	                    placeholder=""
 	                    name="location"
 	                    required
 	                    />
@@ -270,7 +270,7 @@ class Menu extends Component {
 	                	Ideal Calorie Intake &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 	                    <input
 	                    type="text"
-	                    placeholder="Instructions"
+	                    placeholder=""
 	                    name="instruction"
 	                    // value = {this.state.instructions}
 	                    />
