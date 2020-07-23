@@ -213,7 +213,7 @@ class Menu extends Component {
 	    		<div id= "items" > 
 	    		    <div>&nbsp; {d.name} </div>
 	    			<div className="spacer"/>
-		    		<div> Rs.{d.price} &nbsp; </div>
+		    		<div> Cal.{d.price} &nbsp; </div>
 	    		</div>
 		 	<button id='b2' title="Add to cart" onClick = {(e)=> {this.addToCart(e,d.item_id,d.name,d.price, d.category)}}> &nbsp; + &nbsp; &nbsp; </button>  
     		</div>
