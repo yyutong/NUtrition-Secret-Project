@@ -51,7 +51,20 @@
   padding: 0.5% 2%;
   border-radius: 5px;
 }
-/* Pines position */
+/* The Deck position */
+
+#btn8 {
+  position: absolute;
+  width: 50%;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, 570%);
+  background-color: #B02737;
+  color: white;
+  padding: 0.5% 2%;
+  border-radius: 5px;
+}
+/* Frontier position */
 
 
 h4{
@@ -125,3 +138,8 @@ h4{
 #btn7:hover {
   background-color: #891421;
 }
+
+#btn8:hover {
+  background-color: #891421;
+}
+

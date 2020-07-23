@@ -124,6 +124,14 @@ class Userscreen extends Component {
                 	</div>
                 </Link>
 				
+				<Link to ={{ pathname: '/menu', state: { id: 'Frontier' }}}>
+                	<div id="btn8">
+                		<h4> Frontier </h4> 
+                		<div>
+                		<StarRatingComponent name="Frontier" editing={false} starCount={5} value={parseInt(this.state.r7, 10)}/>
+                		</div>
+                	</div>
+                </Link>
             </div>
 
         </div>
