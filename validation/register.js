@@ -37,8 +37,8 @@ module.exports = function validateRegisterInput(data, editprofile) {
         //     errors.number = x + ' , ' + num.length
         // }
 
-        if((Validator.isLength(num, {min: 11, max: 11})) === false) {
-            errors.number = 'Number should have 11 digits'
+        if((Validator.isLength(num, {min: 8, max: 8})) === false) {
+            errors.number = 'Number should have 8 digits'
         }
 
         if ((Validator.isNumeric(num, {no_symbols: true})) === false) {
