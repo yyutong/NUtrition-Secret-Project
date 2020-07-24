@@ -40,9 +40,8 @@ However, without registration and logging in, the function would be limited.(e.g
 ## Scope of Project
 We focus on a **website** and its **mobile adjusting**.
 
-- Provide online menu for various stalls that can be found on NUS campus
-- Provide information of various food for each stall(e.g. price, calories, ingredients, etc)
-- Enable the search function with multiple criteria(e.g. by descending price, by descending calories, by location, by special needs)
+- Provide online menu for various canteens that can be found on NUS campus
+- Provide calorie information of various food for each canteen
 - Track daily food and calories intake
 
 
@@ -50,9 +49,6 @@ We focus on a **website** and its **mobile adjusting**.
 - Provide nutrition information on on-campus food
 - Provide online menus for every canteen
 - Record and track everyday food intake
-- Enable the search function with multiple criteria
-(e.g. by descending price, by descending calories, by location, by special needs)
-- Open a public comment area for users to leave their comments about the food
 - Automatically calculate total calories intake
 - Trial mode available for visitors as well(no need to log in, but functionalities would be limited)
 
@@ -78,10 +74,10 @@ We focus on a **website** and its **mobile adjusting**.
 - [x] Food information search
 - [x] Make trial mode available for users who don't log in
 - [x] Deploy on Heroku
-- [ ] [by 03/7] Add food nutrition information
-- [ ] [by 10/7] Open a public comment area for users to leave their comments about the food
-- [ ] [by 17/7] Mobile adjusting
-- [ ] [by 27/7] Final testing
+- [x] Add food nutrition information
+- [x] Polish frontend display
+- [x] Mobile adjusting
+- [x] Final testing
 
 
 
@@ -108,11 +104,11 @@ We focus on a **website** and its **mobile adjusting**.
   
 - Make trial mode available for users who don't log in
   
-  For users who don't login, they can also search food and look through restaurants and food.
+  For users who don't login, they can also search food to get where the food is located in. But they can't look through restaurants and document food calories
   
 - Deploy on Heroku
 
-  Users can take advantage of this website online. It is stable.
+  Users can take advantage of this website online without deploying it locally. Heroku is a stable platform.
   
 ## Feature test
 
@@ -120,12 +116,13 @@ All the following tests are carried out on https://nutrition-secret.herokuapp.co
 | Test Case                      | Steps Taken                                                                                      | Expected Result                                                                         | Actual Result                                                                           |
 | ------------------------------ | ------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
 | Sign up using an email address | Click  sign up button, then type in personal information                                         | The website jumps to login page                                                         | The website jumps to login page                                                         |
-| Login                          | Click login button then type in correct email and password                                       | The website jumps to main page and user can see the hitory button                       | The website jumps to main page and user can see the bistory button                      |
+| Login                          | Click login button then type in correct email and password                                       | The website jumps to main page and user can see the orders button                       | The website jumps to main page and user can see the orders button                      |
 | Forgot password                | In login screen, click forgot password                                                           | The website asks user to enter associated email, then send the password to the email    | The website asks user to enter associated email, but the email doesn't receive the password    |
 | Look through food              | Click restaurants button and then choose a restaurant                                            | Food provided by this restaurant appears including its calories                         | Food provided by this restaurant appears as well as its calories                        |
 | Search for food                | Search for food in the search box                                                                | The food's information is returned including its calories and restaurants it belongs to | The food's information is returned including its calories and restaurants it belongs to |
 |Check all history documentations                                |Click history button                                                                                                  |All food intaken history is loaded after around three seconds including food calories, time and ideal calorie intaking                                                                                         |All food intaken history is loaded after around three seconds including food calories, time and ideal calorie intaking                                                                                         |
-| Document food                  | Click "+" button on the right of the food, then click the cart picture, then click document all. | The user can see this documentation in his/her history                                | The user can see this documentation in his/her history                                |
+| Document food                  | Click "+" button on the right of the food, then click the cart picture, then click document all. | The user can see this documentation in his/her orders                                | The user can see this documentation in his/her orders                                |
+| Edit profile                                 |Click profile button                                                                                                  |A user can change the account's information especially the password, then the user can log in with the updated information                                                                                                                        |A user can change the account's information especially the password, then the user can log in with the updated information                                                                                                                        |
 
 
 
