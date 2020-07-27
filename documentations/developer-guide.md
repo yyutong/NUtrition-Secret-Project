@@ -12,11 +12,13 @@ If you want to run it locally
 
 then you can see the frontend displays on localhost:3000, the server runs at localhost:5000.
 
-## All Tests Have Done
+## Testing
 
 - self-tests
 - user-tests excluding ourselves
 
+## Database diagram
+![](https://i.postimg.cc/P59yvfrf/A7-AAE292592-B264-B04-C84748350-F4-BDA.png)
 
 ## Software Engineering Principles Application
 
