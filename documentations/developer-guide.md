@@ -13,9 +13,10 @@ If you want to run it locally
 then you can see the frontend displays on localhost:3000, the server runs at localhost:5000.
 
 ## All Tests Have Done
+ 
+- [Self-testing](https://docs.google.com/document/d/1f_qqU7R4AuXIkVB0wqkFXDY9WGJKCatvGndzxuR0WO4/edit)
 
-- self-tests
-- user-tests excluding ourselves
+- [User-testing](https://docs.google.com/spreadsheets/d/1azXy1g_Q0kTlz8d052Vl5jX42UzANbgucwUf0P3yMKE/edit#gid=1258926797)
 
 
 ## Software Engineering Principles Application
